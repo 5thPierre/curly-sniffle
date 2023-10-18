@@ -1,3 +1,4 @@
 [build]
+  base = "supangify"
   command = "ng build"
-  publish = "supangify/dist/supangify"
+  publish = "dist/supangify"
