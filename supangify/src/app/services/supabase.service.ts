@@ -16,12 +16,8 @@ export class SupabaseService {
   private supabase: SupabaseClient
   _session: AuthSession | null = null
 
-
-  supabaseUrl = 'https://zknebqpvzmaxxgemrwih.supabase.co'
-  supabaseKey = process.env.['SUPABASE_KEY']
-
   constructor() {
-    this.supabase = createClient(this.supabaseUrl, this.supabaseKey)
+    this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey)
   }
 
   get session() {
